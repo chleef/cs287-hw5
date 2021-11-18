@@ -14,18 +14,21 @@ pio.renderers.default = "browser"
 # Setup dataframe
 dataFrame = pd.read_csv('shootings-data.csv')
 
+#break up data by the gender attribute
 gk = dataFrame.groupby('gender')
 
-#to find order
-names_counts = gk.get_group('F')['race'].value_counts()
+#to find order of frequency for each gender
+names_counts_F = gk.get_group('F')['race'].value_counts()
+names_counts_M = gk.get_group('M')['race'].value_counts()
 
-print(names_counts)
+print(names_counts_F)
+print(names_counts_M)
 
-#print(gk.first())
 
-#labels in order 
+#labels in order of frequency
 names = ['White, non-Hispanic', 'Black, non-Hispanic', 'Hispanic', 'Asian', 'Native American', 'Other']
 
+#make two pie charts
 myFigure = px.pie(values=gk.get_group('M')['race'].value_counts(),
                       names=names,
                       title = 'Proportion of Shootings by Race for Men')
