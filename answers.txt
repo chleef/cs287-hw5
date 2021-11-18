@@ -15,3 +15,5 @@ Could also look at time on the x-axis and then either total bill or tip percenta
 
 
 Part 2:
+For my graphs, I look at two pie charts. Each pie chart is looking at the breakdown of shootings by race, but split up by genders.
+This is interesting because while the order of greatest frequency stays the same, the proportions are different.

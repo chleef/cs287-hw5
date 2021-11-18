@@ -6,6 +6,8 @@ import plotly.graph_objs as go
 import plotly.express as px
 import plotly.io as pio
 
+
+
 # Change default renderer to browser so that your figures can show up in your browser
 pio.renderers.default = "browser"
 
@@ -14,17 +16,23 @@ dataFrame = pd.read_csv('shootings-data.csv')
 
 gk = dataFrame.groupby('gender')
 
+#to find order
+names_counts = gk.get_group('F')['race'].value_counts()
+
+print(names_counts)
+
 #print(gk.first())
 
+#labels in order 
 names = ['White, non-Hispanic', 'Black, non-Hispanic', 'Hispanic', 'Asian', 'Native American', 'Other']
 
 myFigure = px.pie(values=gk.get_group('M')['race'].value_counts(),
                       names=names,
-                      title = 'Proportion of shootings by race for men')
+                      title = 'Proportion of Shootings by Race for Men')
 
 myFigure1 = px.pie(values=gk.get_group('F')['race'].value_counts(),
                       names=names,
-                      title = 'Proportion of shootings by race for women')
+                      title = 'Proportion of Shootings by Race for Women')
 
 # Display the scatterplot offline on your browser
 myFigure.show()

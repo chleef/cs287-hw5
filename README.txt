@@ -1,0 +1,1 @@
+main.py contains one function that looks at the shootings data
