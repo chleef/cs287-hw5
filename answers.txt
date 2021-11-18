@@ -1,0 +1,17 @@
+Part 1:
+
+1. What does the scatterplot highlight? 
+Data set is skewed to smaller points - people's bills tend to be smaller.
+As Total Bill Amount increases, tips tend to go up - but there is a larger variation in tip amount.
+
+2. What piece of information would make the scatterplot more useful? Explain. 
+More demographic information on the bill payers could be interesting - sex, age, etc.
+Which meal these bills come from to see if there is a difference in lunch and dinner.
+A trendline could help.
+
+3. Are there other variables that would be interesting to put into a scatterplot? Why? 
+Could be interesting to do party size vs. tip percentage.
+Could also look at time on the x-axis and then either total bill or tip percentage.
+
+
+Part 2:
